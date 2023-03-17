@@ -15,6 +15,7 @@ body::before {
   height: 100%;
   position: absolute;
   opacity: 0.5;
+  transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
 }
 
 .s-menu {
@@ -46,8 +47,9 @@ body::before {
 .s-card {
   border: 0.5rem solid white;
   width: calc(100% / 3 - 8%);
-  height: 70vh;
+  height: 60vh;
   position: relative;
+  transition: filter 0.5s ease-in-out;
 }
 
 .s-card__background {
@@ -56,6 +58,7 @@ body::before {
   object-fit: cover;
   position: absolute;
   opacity: 1;
+  transition: opacity 0.5s ease-in-out;;
 }
 
 .s-card__image {
@@ -63,13 +66,85 @@ body::before {
   height: 100%;
   object-fit: contain;
   position: relative;
+  transition: 0.5s ease-in-out;
 }
 
 .s-card__title {
-  font-size: 2rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   text-align: center;
   position: absolute;
   width: 100%;
   bottom: 0;
+}
+
+.s-controller {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.s-controller__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1;
+  transition: transform 0.2s ease-in-out;
+}
+
+.s-controller__button:hover {
+  transform: scale(1.1);
+}
+
+.s-controller__button:nth-child(2) {
+  margin: 0 3.75rem;
+}
+
+.s-controller__line {
+  background-color: white;
+  width: 50%;
+  height: 2px;
+  position: absolute;
+}
+
+/* Hover Animation */
+
+.s-card--hovered .s-card__background {
+  cursor: pointer;
+  opacity: 0;
+}
+
+.s-card--hovered .s-card__image {
+  transform: scale(1.3);
+}
+
+body#card-1-hovered::before {
+  background-image: url('/cheiro-familiar/assets/images/7013326.jpg');
+}
+
+body#card-2-hovered::before {
+  background-image: url('/cheiro-familiar/assets/images/7013326.jpg');
+}
+
+body#card-3-hovered::before {
+  background-image: url('/cheiro-familiar/assets/images/7013326.jpg');
+}
+
+body[id^="card-"]::before {
+  opacity: 1;
+}
+
+body[id^="card-"] .s-card:not(.s-card--hovered) {
+  filter: grayscale(100%);
 }
