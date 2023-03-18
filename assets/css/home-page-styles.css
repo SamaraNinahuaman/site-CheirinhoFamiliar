@@ -1,5 +1,5 @@
-@import url('/cheiro-familiar/assets/css/reset.css');
-@import url('/cheiro-familiar/assets/css/global.css');
+@import url('./reset.css');
+@import url('./global.css');
 
 body {
   background-color: var(--primary-color);
@@ -7,7 +7,7 @@ body {
 
 body::before {
   content: "";
-  background-image: url('/cheiro-familiar/assets/images/7013326.jpg');
+  background-image: url('../images/7013326.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -130,15 +130,15 @@ body::before {
 }
 
 body#card-1-hovered::before {
-  background-image: url('/cheiro-familiar/assets/images/7013326.jpg');
+  background-image: url('../images/7013326.jpg');
 }
 
 body#card-2-hovered::before {
-  background-image: url('/cheiro-familiar/assets/images/7013326.jpg');
+  background-image: url('../images/7013326.jpg');
 }
 
 body#card-3-hovered::before {
-  background-image: url('/cheiro-familiar/assets/images/7013326.jpg');
+  background-image: url('../images/7013326.jpg');
 }
 
 body[id^="card-"]::before {
