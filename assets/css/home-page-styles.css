@@ -45,9 +45,9 @@ body::before {
 }
 
 .s-card {
-  border: 0.2rem solid white;
+  border: 0.1rem solid #FFF;
   width: calc(100% / 3 - 8%);
-  height: 60vh;
+  height: calc(100% / 3 - 8%);
   position: relative;
   transition: filter 0.5s ease-in-out;
 }
@@ -147,4 +147,51 @@ body[id^="card-"]::before {
 
 body[id^="card-"] .s-card:not(.s-card--hovered) {
   filter: grayscale(100%);
+}
+
+.border-animation:hover {
+  border: 0.1rem solid transparent;
+  background-clip: border-box;
+  background-origin: border-box;
+  animation: rotateRainbow 1.5s linear infinite;
+}
+
+
+@keyframes rotateRainbow{
+  0%{
+    border-color: #FF69B4;
+  }
+
+  12.5%{
+    border-color: #FF1493;
+  }
+
+  25%{
+    border-color: #8B008B;
+  }
+
+  37.5%{
+    border-color: #4B0082;
+  }
+
+  50%{
+    border-color: #4B0082;
+  }
+
+  62.5%{
+    border-color: #8B008B;
+  }
+
+  75%{
+    border-color: #FF1493;
+  }
+
+  87.5%{
+    border-color:  #FF69B4;
+  }
+
+  100%{
+    border-color: #FF69B4;
+  }
+
 }
