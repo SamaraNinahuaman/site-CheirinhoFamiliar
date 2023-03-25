@@ -18,6 +18,18 @@ body::before {
   transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
 }
 
+.inf {
+  max-width: 50%;
+  margin: 15px auto;
+  padding: 5px;
+  align-content: center;
+}
+
+.contato:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .s-menu {
   padding: 1rem 0;
   width: 100%;
@@ -45,11 +57,12 @@ body::before {
 }
 
 .s-card {
-  border: 0.1rem solid #FFF;
+  border: none;
   width: calc(100% / 3 - 8%);
-  height: calc(100% / 3 - 8%);
+  height: 60vh;
   position: relative;
   transition: filter 0.5s ease-in-out;
+  margin-top: 20px;
 }
 
 .s-card__background {
@@ -67,15 +80,6 @@ body::before {
   object-fit: contain;
   position: relative;
   transition: 0.5s ease-in-out;
-}
-
-.s-card__title {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  text-align: center;
-  position: absolute;
-  width: 100%;
-  bottom: 0;
 }
 
 .s-controller {
@@ -126,7 +130,7 @@ body::before {
 }
 
 .s-card--hovered .s-card__image {
-  transform: scale(1.3);
+  transform: scale(1.4);
 }
 
 body#card-1-hovered::before {
@@ -150,7 +154,7 @@ body[id^="card-"] .s-card:not(.s-card--hovered) {
 }
 
 .border-animation:hover {
-  border: 0.1rem solid transparent;
+  border: 0.2rem solid transparent;
   background-clip: border-box;
   background-origin: border-box;
   animation: rotateRainbow 1.5s linear infinite;
