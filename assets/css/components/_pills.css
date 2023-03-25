@@ -4,7 +4,7 @@
 }
 
 .pills ul li{
-  background-color: var(--primary-color);
+  background-color: rgb(144, 15, 129);
   color: white;
   padding: 5px 15px;
   margin: 0 10px;

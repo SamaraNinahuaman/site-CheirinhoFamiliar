@@ -18,18 +18,6 @@ body::before {
   transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
 }
 
-.inf {
-  max-width: 50%;
-  margin: 15px auto;
-  padding: 5px;
-  align-content: center;
-}
-
-.contato:hover{
-  cursor: pointer;
-  text-decoration: underline;
-}
-
 .s-menu {
   padding: 1rem 0;
   width: 100%;
@@ -58,11 +46,11 @@ body::before {
 
 .s-card {
   border: none;
-  width: calc(100% / 3 - 8%);
+  width: 100%;
   height: 60vh;
   position: relative;
+  margin: 30px;
   transition: filter 0.5s ease-in-out;
-  margin-top: 20px;
 }
 
 .s-card__background {
@@ -71,7 +59,7 @@ body::before {
   object-fit: cover;
   position: absolute;
   opacity: 1;
-  transition: opacity 0.5s ease-in-out;;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .s-card__image {
@@ -88,6 +76,8 @@ body::before {
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+  bottom: 1.5rem;
+  width: 100%;
 }
 
 .s-controller__button {
@@ -100,7 +90,7 @@ body::before {
   border-radius: 50%;
   background-color: var(--primary-color);
   text-align: center;
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
   z-index: 1;
@@ -113,6 +103,13 @@ body::before {
 
 .s-controller__button:nth-child(2) {
   margin: 0 3.75rem;
+}
+
+.s-controller__button--active {
+  background-color: white;
+  color: var(--primary-color);
+  border: 0.1875rem solid var(--primary-color);
+  outline: 0.125rem solid white;
 }
 
 .s-controller__line {
@@ -198,4 +195,15 @@ body[id^="card-"] .s-card:not(.s-card--hovered) {
     border-color: #FF69B4;
   }
 
+}
+
+.inf {
+  width: 50%;
+  position: absolute;
+  margin-left: 26.5%;
+}
+
+.contato:hover{
+  cursor: pointer;
+  text-decoration: underline;
 }
