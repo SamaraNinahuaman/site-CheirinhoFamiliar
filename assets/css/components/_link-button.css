@@ -9,7 +9,7 @@ a.link-button .icon{
   width: 32px;
   height: 32px;
   padding: 3px;
-  background-color: var(--primary-color);
+  background-color: rgb(214, 29, 29);
   border: solid 1px white;
   background-clip: content-box;
   border-radius: 50%;
