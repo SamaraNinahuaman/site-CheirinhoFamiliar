@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/home-page-styles.css">
-  <script src="./assets/scripts/card-hover-animation.js"></script>
+  <script src="./assets/scripts/script.js"></script>
   <title>Cheirinho Familiar</title>
 </head>
 
@@ -23,7 +23,8 @@
         <a href="./pages/vareta-perfumada/vareta-perfumada.html">Vareta Perfumada</a>
       </li>
       <li class="s-menu__item">
-        <img class="s-menu__item s-menu__icon" src="./assets/images/icons/cheiroFamiliarLogo.png" alt="Cheiro familiar logo">
+        <img class="s-menu__item s-menu__icon" src="./assets/images/icons/cheiroFamiliarLogo.png"
+          alt="Cheiro familiar logo">
       </li>
       <li class="s-menu__item">
         <a href="./pages/vela-aromatica/vela-aromatica.html">Vela Aromática</a>
@@ -39,41 +40,44 @@
   </nav>
 
   <div class="s-container">
-    <a href="./pages/spray-cheiroso/spray-cheiroso.html" class="s-card border-animation" id="card-1">
-      <img class="s-card__background" src="./assets/images/7013326.jpg">
-      <img class="s-card__image" src="./assets/images/spray-aromatico/sprayAromatico3.png" alt="Spray Aromático">
-      <h2 class="s-card__title"></h2>
-    </a>
+    <div class="s-cards-carousel" style="transform: translateZ(-40vw) rotateY(0deg);">
+      <a href="./pages/spray-cheiroso/spray-cheiroso.html" class="s-card border-animation" id="card-1">
+        <img class="s-card__background" src="./assets/images/7013326.jpg">
+        <img class="s-card__image" src="./assets/images/spray-aromatico/sprayAromatico3.1.png" alt="Spray Aromático">
+        <h2 class="s-card__title"></h2>
+      </a>
 
-    <a href="./pages/vareta-perfumada/vareta-perfumada.html" class="s-card border-animation" id="card-2">
-      <img class="s-card__background" src="./assets/images/7013326.jpg">
-      <img class="s-card__image" src="./assets/images/vareta-aromatica/varetaAromatica3.png" alt="Vareta Aromática">
-      <h2 class="s-card__title"></h2>
-    </a>
+      <a href="./pages/vareta-perfumada/vareta-perfumada.html" class="s-card border-animation" id="card-2">
+        <img class="s-card__background" src="./assets/images/7013326.jpg">
+        <img class="s-card__image" src="./assets/images/vareta-aromatica/varetaAromatica3.3.png" alt="Vareta Aromática">
+        <h2 class="s-card__title"></h2>
+      </a>
 
-    <a href="./pages/vela-aromatica/vela-aromatica.html" class="s-card border-animation" id="card-3">
-      <img class="s-card__background" src="./assets/images/7013326.jpg">
-      <img class="s-card__image" src="./assets/images/vela-aromatica/velaAromatica3.png" alt="Vela Aromática">
-      <h2 class="s-card__title"></h2>
-    </a>
+      <a href="./pages/vela-aromatica/vela-aromatica.html" class="s-card border-animation" id="card-3">
+        <img class="s-card__background" src="./assets/images/7013326.jpg">
+        <img class="s-card__image" src="./assets/images/vela-aromatica/velaAromatica3.1.png" alt="Vela Aromática">
+        <h2 class="s-card__title"></h2>
+      </a>
+    </div>
 
   </div>
 
   <div class="s-controller">
-    <div class="s-controller__button">
+    <div id="1" onclick='selectCarouselItem(this)' class="s-controller__button s-controller__button--active">
       01
     </div>
-    <div class="s-controller__button">
+    <div id="2" onclick='selectCarouselItem(this)' class="s-controller__button">
       02
     </div>
-    <div class="s-controller__button">
+    <div id="3" onclick='selectCarouselItem(this)' class="s-controller__button">
       03
     </div>
     <div class="s-controller__line"></div>
   </div>
 
   <footer class="inf">
-    <div>Site desenvolvido com amor por: <a href ="mailto:sami.dev.nina@gmail.com" class="contato">Samara Lopes Ninahuaman</a></div>
+    <div>Site desenvolvido com amor por: <a href="mailto:sami.dev.nina@gmail.com" class="contato">Samara Lopes
+        Ninahuaman</a></div>
   </footer>
 
 </body>

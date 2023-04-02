@@ -42,15 +42,28 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  perspective: 3000px;
 }
 
 .s-card {
-  border: none;
-  width: 100%;
+  border: 0.2rem solid white;
+  width: 100%; 
   height: 60vh;
-  position: relative;
+  position: absolute;
   margin: 30px;
   transition: filter 0.5s ease-in-out;
+}
+
+.s-card:nth-child(1) {
+  transform: rotateY(0deg) translateZ(40vw);
+}
+
+.s-card:nth-child(2) {
+  transform: rotateY(120deg) translateZ(40vw);
+}
+
+.s-card:nth-child(3) {
+  transform: rotateY(240deg) translateZ(40vw);
 }
 
 .s-card__background {
@@ -71,12 +84,12 @@ body::before {
 }
 
 .s-controller {
-  position: relative;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
-  bottom: 1.5rem;
+  bottom: 3.5rem;
   width: 100%;
 }
 
@@ -150,13 +163,21 @@ body[id^="card-"] .s-card:not(.s-card--hovered) {
   filter: grayscale(100%);
 }
 
+.s-cards-carousel {
+  display: flex;
+  justify-content: center;
+  width: calc(100vw / 3 - 10%);
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease-in;
+}
+
+
 .border-animation:hover {
   border: 0.2rem solid transparent;
   background-clip: border-box;
   background-origin: border-box;
   animation: rotateRainbow 1.5s linear infinite;
 }
-
 
 @keyframes rotateRainbow{
   0%{
@@ -198,7 +219,7 @@ body[id^="card-"] .s-card:not(.s-card--hovered) {
 }
 
 .inf {
-  position: relative;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
